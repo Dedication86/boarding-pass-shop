@@ -1,0 +1,20 @@
+{
+  "name": "bps-api",
+  "version": "2.0.0",
+  "description": "Boarding Pass Clothing — streetwear storefront API (demo)",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "reset": "node -e \"require('fs').rmSync('bps.db',{force:true});console.log('bps.db removed — restart the server to reseed')\""
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^11.10.0",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "zod": "^3.25.67"
+  }
+}
