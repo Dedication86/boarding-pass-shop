@@ -6,6 +6,9 @@ import jwt from "jsonwebtoken";
 import { z } from "zod";
 import { db, seedIfEmpty, hydrate } from "./db.js";
 import { COLLECTIONS } from "./catalog.js";
+import path from "node:path";
+import fs from "node:fs";
+import { fileURLToPath } from "node:url";
 
 const app = express();
 const PORT = Number(process.env.PORT) || 4000;
@@ -228,5 +231,19 @@ app.get("/api/orders", requireAuth, (req, res) => {
 });
 
 app.get("/api/health", (_req, res) => res.json({ ok: true, brand: "Boarding Pass Clothing", ts: Date.now() }));
+
+/* ------------------------- static frontend (production) ------------------------- */
+// When the frontend has been built (`npm run build` at the repo root), serve it from
+// this same server so the whole demo runs as ONE service on ONE URL — no CORS, and the
+// auth cookie stays first-party. In local dev, Vite serves the frontend on :5173 instead.
+const DIST = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../../frontend/dist");
+if (fs.existsSync(DIST)) {
+  app.use(express.static(DIST));
+  app.use((req, res, next) => {
+    if (req.method !== "GET" || req.path.startsWith("/api")) return next();
+    res.sendFile(path.join(DIST, "index.html"));
+  });
+  console.log("Serving frontend from", DIST);
+}
 
 app.listen(PORT, () => console.log(`BPS API boarding at http://localhost:${PORT}`));
