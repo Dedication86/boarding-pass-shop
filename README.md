@@ -4,15 +4,9 @@ A full-stack e-commerce demo for **Boarding Pass Clothing (BPS)** — a streetwe
 
 > "Earth is a giant escape game."
 
-![Hero](docs/preview-hero.png)
-
 Built by Dedication Studios as a portfolio piece and a working prototype for the BPS brand. React + Vite frontend, Express + SQLite backend. No real payments.
 
 ---
-
-## Purchase flow
-
-![Flow](docs/preview-flow.png)
 
 ## What it does
 
@@ -60,6 +54,20 @@ npm run dev
 First API start seeds the catalog into `backend/bps.db`. To reseed from scratch: `npm run reset` in `backend/`, then restart.
 
 Demo account: create one with any email + 8-char password. Test card: anything numeric (default `4242 4242 4242 4242`).
+
+---
+
+## Deploy (Railway, one service)
+
+The Express server serves the built frontend from `frontend/dist`, so the whole demo runs as a single Railway service on one URL.
+
+1. Push this folder to a GitHub repo.
+2. Railway → **New Project → Deploy from GitHub repo**. `railway.json` sets the build (`npm run build`) and start (`npm start`) commands automatically.
+3. **Variables** tab → add `JWT_SECRET` (any long random string) and `NODE_ENV=production`.
+4. **Settings → Networking → Generate Domain** — that's your public link.
+5. Optional, so accounts/orders survive redeploys: **+ New → Volume**, mount at `/data`, then add `DB_PATH=/data/bps.db`. Without a volume the catalog re-seeds fresh on every deploy, which is fine for a demo.
+
+`/api/health` is the healthcheck. Local dev is unchanged (two terminals, above).
 
 ---
 
@@ -124,7 +132,7 @@ Nothing else changes — the cards, drawer, bag and receipt all read `product.im
 
 - Card data never reaches the server; the browser generates a `mock_tok_*` token and sends only `last4`. In production use Stripe Checkout / Elements — never handle PANs yourself.
 - Cookie is httpOnly + SameSite=Lax; `secure` flips on when `NODE_ENV=production`.
-- Set `JWT_SECRET` and `CLIENT_ORIGIN` env vars for anything beyond localhost.
+- Set `JWT_SECRET` for anything beyond localhost. `CLIENT_ORIGIN` is only needed if the frontend is hosted on a different domain than the API.
 
 ---
 
