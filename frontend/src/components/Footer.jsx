@@ -44,8 +44,8 @@ export function Footer() {
     <footer className="footer">
       <div className="footer__top">
         <div>
-          <span className="brand__mark">BPS</span>
-          <p className="muted">Boarding Pass Clothing. Streetwear from transit ephemera.<br />Earth is a giant escape game.</p>
+          <span className="brand__mark">DPT</span>
+          <p className="muted">Departure Clothing. Streetwear from transit ephemera.<br />Earth is a giant escape game.</p>
         </div>
         <div className="footer__cols">
           <div><b>Lanes</b><a href="#shop">Transit Minimal</a><a href="#shop">Destination Loud</a><a href="#shop">Tarmac Utility</a></div>
@@ -55,7 +55,7 @@ export function Footer() {
       </div>
       <div className="footer__bottom mono">
         <Barcode seed="FOOTER" height={26} />
-        <span>© {new Date().getFullYear()} BOARDING PASS CLOTHING · DEMO STORE · NO REAL PAYMENTS</span>
+        <span>© {new Date().getFullYear()} DEPARTURE CLOTHING · DEMO STORE · NO REAL PAYMENTS</span>
         <span>DESIGN + BUILD: DEDICATION STUDIOS</span>
       </div>
     </footer>

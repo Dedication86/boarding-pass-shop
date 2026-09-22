@@ -22,9 +22,9 @@ export function Ticker() {
 export function Header({ user, count, onOpen, onLogout, onGoShop }) {
   return (
     <header className="header">
-      <a className="brand" href="#top" aria-label="Boarding Pass Clothing home">
-        <span className="brand__mark">BPS</span>
-        <span className="brand__word">Boarding Pass<small>Clothing</small></span>
+      <a className="brand" href="#top" aria-label="Departure Clothing home">
+        <span className="brand__mark">DPT</span>
+        <span className="brand__word">Departure<small>Clothing</small></span>
       </a>
 
       <nav className="nav">

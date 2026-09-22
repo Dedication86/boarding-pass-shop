@@ -114,11 +114,11 @@ export function ReceiptModal({ order, onClose }) {
     <Sheet title="You're boarded." eyebrow="Order confirmed" onClose={onClose}>
       <div className="receipt">
         <div className="receipt__head">
-          <span className="pass__brand">BOARDING PASS</span>
+          <span className="pass__brand">DEPARTURE</span>
           <span className="mono">PNR <b>{order.pnr}</b></span>
         </div>
         <div className="pass__route">
-          <div><small>FROM</small><b>BPS</b></div>
+          <div><small>FROM</small><b>DPT</b></div>
           <div className="pass__plane">✈</div>
           <div><small>TO</small><b>YOU</b></div>
         </div>

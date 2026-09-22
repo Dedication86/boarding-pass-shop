@@ -32,8 +32,8 @@ export function Hero({ drop, onShopCapsule }) {
       <div className="pass" aria-label="Boarding pass graphic">
         <div className="pass__main">
           <div className="pass__row pass__row--top">
-            <span className="pass__brand">BOARDING PASS</span>
-            <span className="mono">BPS · {drop?.code || "BPS001"}</span>
+            <span className="pass__brand">DEPARTURE</span>
+            <span className="mono">DPT · {drop?.code || "DPT001"}</span>
           </div>
           <div className="pass__route">
             <div><small>FROM</small><b>HOME</b></div>
@@ -51,7 +51,7 @@ export function Hero({ drop, onShopCapsule }) {
           <Barcode seed="EARTH-001" height={40} />
         </div>
         <div className="pass__stub">
-          <span className="pass__brand">BPS</span>
+          <span className="pass__brand">DPT</span>
           <div><small>FROM</small><b>HOME</b></div>
           <div><small>TO</small><b>ANYWHERE</b></div>
           <div><small>SEAT</small><b>1A</b></div>

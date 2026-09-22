@@ -13,7 +13,7 @@ export function Perforation() {
 }
 
 /** Fake barcode drawn with CSS gradients — seeded by a string so it's stable. */
-export function Barcode({ seed = "BPS", height = 34 }) {
+export function Barcode({ seed = "DPT", height = 34 }) {
   let h = 0;
   for (const ch of seed) h = (h * 31 + ch.charCodeAt(0)) >>> 0;
   const bars = [];
