@@ -1,5 +1,5 @@
 /**
- * Boarding Pass Clothing — seed catalog.
+ * Departure Clothing — seed catalog.
  *
  * Three design lanes (collections):
  *   transit-minimal    — tonal, quiet, small hits of orange
@@ -19,10 +19,10 @@ export const COLLECTIONS = [
 ];
 
 export const DROPS = [
-  { code: "BPS001", name: "E.A.R.T.H. — Capsule 001", status: "boarding", date: "2026-09-04", blurb: "Earth is a giant escape game. First capsule. Numbered run." },
-  { code: "BPS002", name: "Tarmac Utility — FW26", status: "scheduled", date: "2026-10-17", blurb: "Work jackets, cargo pants, reflective hits." },
-  { code: "BPS003", name: "Transit Minimal — 002", status: "scheduled", date: "2026-11-21", blurb: "Tonal heavyweights for winter transit." },
-  { code: "BPS000", name: "Destination Loud — Preflight", status: "departed", date: "2026-06-12", blurb: "The test run. Gone." }
+  { code: "DPT001", name: "E.A.R.T.H. — Capsule 001", status: "boarding", date: "2026-09-04", blurb: "Earth is a giant escape game. First capsule. Numbered run." },
+  { code: "DPT002", name: "Tarmac Utility — FW26", status: "scheduled", date: "2026-10-17", blurb: "Work jackets, cargo pants, reflective hits." },
+  { code: "DPT003", name: "Transit Minimal — 002", status: "scheduled", date: "2026-11-21", blurb: "Tonal heavyweights for winter transit." },
+  { code: "DPT000", name: "Destination Loud — Preflight", status: "departed", date: "2026-06-12", blurb: "The test run. Gone." }
 ];
 
 const APPAREL = ["S", "M", "L", "XL", "XXL"];
@@ -32,15 +32,15 @@ const ONE_SIZE = ["OS"];
 export const PRODUCTS = [
   // ---------- TRANSIT MINIMAL ----------
   {
-    sku: "BPS-TM-001", name: "Layover Tee", collection: "transit-minimal", capsule: null, dropCode: null,
+    sku: "DPT-TM-001", name: "Layover Tee", collection: "transit-minimal", capsule: null, dropCode: null,
     price: 42, comparePrice: null, colorway: "Paper / Ink",
     description: "Heavyweight 260gsm cotton tee. Small orange gate-code hit on the chest, boarding-pass stub print at the hem.",
-    details: ["260gsm ring-spun cotton", "Boxy, dropped shoulder", "Garment-dyed, pre-shrunk", "Woven BPS stub label"],
+    details: ["260gsm ring-spun cotton", "Boxy, dropped shoulder", "Garment-dyed, pre-shrunk", "Woven DPT stub label"],
     art: "tee", badge: null,
     stock: { S: 14, M: 22, L: 20, XL: 12, XXL: 6 }
   },
   {
-    sku: "BPS-TM-002", name: "Gate Change Hoodie", collection: "transit-minimal", capsule: null, dropCode: null,
+    sku: "DPT-TM-002", name: "Gate Change Hoodie", collection: "transit-minimal", capsule: null, dropCode: null,
     price: 88, comparePrice: null, colorway: "Tarmac Grey",
     description: "14oz brushed fleece hoodie with tonal 'GATE CHANGE' embroidery and a hidden passport pocket in the kangaroo pouch.",
     details: ["14oz brushed-back fleece", "Tonal chain-stitch embroidery", "Hidden passport pocket", "Double-lined hood"],
@@ -48,7 +48,7 @@ export const PRODUCTS = [
     stock: { S: 6, M: 11, L: 9, XL: 4, XXL: 2 }
   },
   {
-    sku: "BPS-TM-003", name: "Standby Cap", collection: "transit-minimal", capsule: null, dropCode: null,
+    sku: "DPT-TM-003", name: "Standby Cap", collection: "transit-minimal", capsule: null, dropCode: null,
     price: 36, comparePrice: null, colorway: "Ink",
     description: "Unstructured 6-panel cap. Orange 'STANDBY' tab on the side, adjustable strap with a metal baggage-tag clip.",
     details: ["Unstructured 6-panel", "Garment-washed twill", "Metal clip closure", "One size"],
@@ -56,7 +56,7 @@ export const PRODUCTS = [
     stock: { OS: 30 }
   },
   {
-    sku: "BPS-TM-004", name: "Jetway Crewneck", collection: "transit-minimal", capsule: null, dropCode: null,
+    sku: "DPT-TM-004", name: "Jetway Crewneck", collection: "transit-minimal", capsule: null, dropCode: null,
     price: 78, comparePrice: null, colorway: "Paper",
     description: "Heavy crewneck with a single line of mono type across the back: FROM HOME → TO ANYWHERE.",
     details: ["12oz loopback fleece", "Ribbed hem and cuffs", "Back print, mono type", "Relaxed fit"],
@@ -66,7 +66,7 @@ export const PRODUCTS = [
 
   // ---------- DESTINATION LOUD ----------
   {
-    sku: "BPS-DL-001", name: "E.A.R.T.H. Escape Game Tee", collection: "destination-loud", capsule: "E.A.R.T.H.", dropCode: "BPS001",
+    sku: "DPT-DL-001", name: "E.A.R.T.H. Escape Game Tee", collection: "destination-loud", capsule: "E.A.R.T.H.", dropCode: "DPT001",
     price: 48, comparePrice: null, colorway: "Ink / Safety Orange",
     description: "Capsule 001. Front: E.A.R.T.H. lockup. Back: 'EARTH IS A GIANT ESCAPE GAME' with a full departures-board graphic. Numbered run of 300.",
     details: ["Capsule 001 — numbered 1/300", "Front + full back print", "Water-based inks", "Boxy fit"],
@@ -74,7 +74,7 @@ export const PRODUCTS = [
     stock: { S: 3, M: 2, L: 4, XL: 1, XXL: 0 }
   },
   {
-    sku: "BPS-DL-002", name: "Departures Board Hoodie", collection: "destination-loud", capsule: "E.A.R.T.H.", dropCode: "BPS001",
+    sku: "DPT-DL-002", name: "Departures Board Hoodie", collection: "destination-loud", capsule: "E.A.R.T.H.", dropCode: "DPT001",
     price: 98, comparePrice: null, colorway: "Ink / Signal Yellow",
     description: "All-over split-flap departures print. Every city is a place we haven't been yet. Capsule 001.",
     details: ["All-over discharge print", "14oz fleece", "Signal Yellow drawcords", "Capsule 001"],
@@ -82,7 +82,7 @@ export const PRODUCTS = [
     stock: { S: 9, M: 12, L: 12, XL: 8, XXL: 3 }
   },
   {
-    sku: "BPS-DL-003", name: "Passport Stamp Longsleeve", collection: "destination-loud", capsule: null, dropCode: null,
+    sku: "DPT-DL-003", name: "Passport Stamp Longsleeve", collection: "destination-loud", capsule: null, dropCode: null,
     price: 58, comparePrice: null, colorway: "Paper / Stamp Red",
     description: "Sleeves covered in oversized entry stamps from places that don't exist yet. Chest hit in Stamp Red.",
     details: ["Heavyweight longsleeve", "Sleeve prints both arms", "Ribbed cuffs", "Boxy fit"],
@@ -90,7 +90,7 @@ export const PRODUCTS = [
     stock: { S: 5, M: 7, L: 6, XL: 4, XXL: 2 }
   },
   {
-    sku: "BPS-DL-004", name: "Excess Baggage Tote", collection: "destination-loud", capsule: null, dropCode: null,
+    sku: "DPT-DL-004", name: "Excess Baggage Tote", collection: "destination-loud", capsule: null, dropCode: null,
     price: 34, comparePrice: null, colorway: "Safety Orange",
     description: "Oversized canvas tote in Safety Orange. 'EXCESS BAGGAGE' in condensed black type. Fits a laptop, a hoodie and your bad decisions.",
     details: ["18oz canvas", "Interior zip pocket", "Reinforced straps", "One size"],
@@ -100,7 +100,7 @@ export const PRODUCTS = [
 
   // ---------- TARMAC UTILITY ----------
   {
-    sku: "BPS-TU-001", name: "Ramp Agent Cargo Pant", collection: "tarmac-utility", capsule: null, dropCode: "BPS002",
+    sku: "DPT-TU-001", name: "Ramp Agent Cargo Pant", collection: "tarmac-utility", capsule: null, dropCode: "DPT002",
     price: 124, comparePrice: null, colorway: "Tarmac Grey / Hi-Vis",
     description: "Wide-leg cargo with hi-vis orange bar-tacks and a reflective stripe inside the cuff — show it or don't.",
     details: ["Ripstop cotton", "Reflective inner cuff", "Six pockets", "Wide leg, cinch hem"],
@@ -108,7 +108,7 @@ export const PRODUCTS = [
     stock: { S: 6, M: 9, L: 9, XL: 5, XXL: 3 }
   },
   {
-    sku: "BPS-TU-002", name: "Tarmac Work Jacket", collection: "tarmac-utility", capsule: null, dropCode: "BPS002",
+    sku: "DPT-TU-002", name: "Tarmac Work Jacket", collection: "tarmac-utility", capsule: null, dropCode: "DPT002",
     price: 168, comparePrice: null, colorway: "Ink",
     description: "Chore-style work jacket in heavy duck canvas. Corduroy collar, hidden boarding-pass pocket, orange bar-tacks at stress points.",
     details: ["12oz duck canvas", "Corduroy collar", "Boarding-pass chest pocket", "Bar-tacked in Safety Orange"],
@@ -116,7 +116,7 @@ export const PRODUCTS = [
     stock: { S: 4, M: 6, L: 6, XL: 4, XXL: 2 }
   },
   {
-    sku: "BPS-TU-003", name: "Ground Crew Vest", collection: "tarmac-utility", capsule: null, dropCode: null,
+    sku: "DPT-TU-003", name: "Ground Crew Vest", collection: "tarmac-utility", capsule: null, dropCode: null,
     price: 96, comparePrice: 110, colorway: "Safety Orange / Reflective",
     description: "Utility vest with 3M-style reflective taping and four cargo pockets. The loudest piece we make on purpose.",
     details: ["Reflective taping", "Four cargo pockets", "Two-way zip", "Adjustable side cinch"],
@@ -124,7 +124,7 @@ export const PRODUCTS = [
     stock: { S: 2, M: 3, L: 1, XL: 0, XXL: 0 }
   },
   {
-    sku: "BPS-TU-004", name: "Crew Beanie", collection: "tarmac-utility", capsule: null, dropCode: null,
+    sku: "DPT-TU-004", name: "Crew Beanie", collection: "tarmac-utility", capsule: null, dropCode: null,
     price: 32, comparePrice: null, colorway: "Signal Yellow",
     description: "Ribbed acrylic-wool beanie with a woven baggage-tag label. Signal Yellow so they can find you on the tarmac.",
     details: ["Acrylic / wool blend", "Woven baggage-tag label", "Fold-over cuff", "One size"],

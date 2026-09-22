@@ -21,7 +21,7 @@ app.use(cors({ origin: ORIGIN, credentials: true }));
 app.use(express.json({ limit: "20kb" }));
 app.use(cookieParser());
 
-if (seedIfEmpty()) console.log("Seeded Boarding Pass catalog.");
+if (seedIfEmpty()) console.log("Seeded Departure catalog.");
 
 /* ---------------------------------- auth ---------------------------------- */
 
@@ -230,7 +230,7 @@ app.get("/api/orders", requireAuth, (req, res) => {
   res.json({ orders: orders.map(o => ({ ...o, items: items.all(o.id) })) });
 });
 
-app.get("/api/health", (_req, res) => res.json({ ok: true, brand: "Boarding Pass Clothing", ts: Date.now() }));
+app.get("/api/health", (_req, res) => res.json({ ok: true, brand: "Departure Clothing", ts: Date.now() }));
 
 /* ------------------------- static frontend (production) ------------------------- */
 // When the frontend has been built (`npm run build` at the repo root), serve it from
@@ -246,4 +246,4 @@ if (fs.existsSync(DIST)) {
   console.log("Serving frontend from", DIST);
 }
 
-app.listen(PORT, () => console.log(`BPS API boarding at http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`DPT API boarding at http://localhost:${PORT}`));

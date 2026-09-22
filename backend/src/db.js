@@ -1,7 +1,7 @@
 import Database from "better-sqlite3";
 import { PRODUCTS, DROPS, sizesFor } from "./catalog.js";
 
-export const db = new Database(process.env.DB_PATH || "bps.db");
+export const db = new Database(process.env.DB_PATH || "departure.db");
 db.pragma("journal_mode = WAL");
 db.pragma("foreign_keys = ON");
 
