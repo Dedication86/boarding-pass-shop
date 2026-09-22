@@ -1,7 +1,7 @@
 {
-  "name": "bps-web",
+  "name": "dpt-web",
   "version": "2.0.0",
-  "description": "Boarding Pass Clothing — streetwear storefront (demo)",
+  "description": "Departure Clothing — streetwear storefront (demo)",
   "type": "module",
   "scripts": {
     "dev": "vite",
