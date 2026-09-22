@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
-const KEY = "bps.bag.v1";
+const KEY = "dpt.bag.v1";
 
 /**
  * Bag state keyed by variantId (product + size).
