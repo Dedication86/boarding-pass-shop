@@ -1,4 +1,4 @@
-# BPS — Demo Brand System
+# DPT — Demo Brand System
 
 Working brand system used in this storefront. Small enough to hold in your head; every value lives in `frontend/src/styles.css` under `:root`.
 
@@ -40,7 +40,7 @@ Self-hosted via Fontsource — no external font requests.
 
 Status words come from the board, not from retail:
 
-| Retail | BPS |
+| Retail | DPT |
 |---|---|
 | In stock | Boarding |
 | Low stock | Limited |
@@ -64,6 +64,6 @@ Capsule 001: **E.A.R.T.H.** — "Earth is a giant escape game."
 
 ## Open items for the real brand
 
-- Trademark search on "Boarding Pass Clothing" and "BPS" before any public use
+- Trademark search on "Departure Clothing" and "DPT" before any public use
 - Final wordmark (the demo uses a type-only lockup)
 - Photography direction per lane
