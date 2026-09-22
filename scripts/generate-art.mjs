@@ -57,7 +57,7 @@ const ART = {
     <path d="M-40 -215 Q0 -120 40 -215" fill="none" stroke="${stroke(b)}" stroke-width="3"/>
     <path d="M-70 60 L70 60 L70 150 L-70 150 Z" fill="none" stroke="${stroke(b)}" stroke-width="3"/>
     <line x1="-14" y1="-130" x2="-14" y2="-40" stroke="${a}" stroke-width="4"/><line x1="14" y1="-130" x2="14" y2="-40" stroke="${a}" stroke-width="4"/>
-    <text x="0" y="10" text-anchor="middle" font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="26" letter-spacing="3" fill="${a}">BPS</text>`,
+    <text x="0" y="10" text-anchor="middle" font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="26" letter-spacing="3" fill="${a}">DPT</text>`,
   crew: (b, a) => `
     <path d="M-130 -150 L-60 -185 Q0 -165 60 -185 L130 -150 L180 -50 L125 -20 L125 195 L-125 195 L-125 -20 L-180 -50 Z" fill="${b}" stroke="${stroke(b)}" stroke-width="3"/>
     <path d="M-60 -185 Q0 -150 60 -185" fill="none" stroke="${stroke(b)}" stroke-width="6"/>
@@ -74,7 +74,7 @@ const ART = {
     <rect x="-140" y="40" width="280" height="90" rx="10" fill="${b}" stroke="${stroke(b)}" stroke-width="3"/>
     <g stroke="${stroke(b)}" stroke-width="2">${Array.from({length:13},(_,i)=>`<line x1="${-120+i*20}" y1="45" x2="${-120+i*20}" y2="125"/>`).join("")}</g>
     <rect x="-40" y="70" width="80" height="30" fill="${a}"/>
-    <text x="0" y="90" text-anchor="middle" font-family="'Space Mono',monospace" font-size="11" fill="${C.ink}">BPS-TAG</text>`,
+    <text x="0" y="90" text-anchor="middle" font-family="'Space Mono',monospace" font-size="11" fill="${C.ink}">DPT-TAG</text>`,
   pant: (b, a) => `
     <path d="M-120 -210 L120 -210 L135 -120 L110 230 L20 230 L0 -40 L-20 230 L-110 230 L-135 -120 Z" fill="${b}" stroke="${stroke(b)}" stroke-width="3"/>
     <rect x="-120" y="-210" width="240" height="26" fill="none" stroke="${stroke(b)}" stroke-width="3"/>
@@ -123,7 +123,7 @@ for (const p of PRODUCTS) {
   <g stroke="${C.line}" stroke-width="1">${Array.from({length:20},(_,i)=>`<line x1="${i*40}" y1="0" x2="${i*40}" y2="1000"/>`).join("")}${Array.from({length:25},(_,i)=>`<line x1="0" y1="${i*40}" x2="800" y2="${i*40}"/>`).join("")}</g>
   <!-- header strip -->
   <rect x="0" y="0" width="800" height="70" fill="${C.ink}"/>
-  <text x="40" y="46" font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="30" letter-spacing="4" fill="${C.paper}">BOARDING PASS</text>
+  <text x="40" y="46" font-family="'Barlow Condensed','Arial Narrow',sans-serif" font-weight="700" font-size="30" letter-spacing="4" fill="${C.paper}">DEPARTURE</text>
   <text x="760" y="46" text-anchor="end" font-family="'Space Mono',monospace" font-size="18" fill="${C.orange}">${p.sku}</text>
   <!-- garment -->
   <g transform="translate(400 480) scale(1.35)">${ART[p.art](body, accent)}</g>
