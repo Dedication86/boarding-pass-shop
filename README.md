@@ -1,10 +1,10 @@
-# Boarding Pass Clothing — Streetwear Storefront (Demo)
+# Departure Clothing — Streetwear Storefront (Demo)
 
-A full-stack e-commerce demo for **Boarding Pass Clothing (BPS)** — a streetwear concept built from transit ephemera: boarding passes, baggage tags, departure boards.
+A full-stack e-commerce demo for **Departure Clothing (DPT)** — a streetwear concept built from transit ephemera: boarding passes, baggage tags, departure boards.
 
 > "Earth is a giant escape game."
 
-Built by Dedication Studios as a portfolio piece and a working prototype for the BPS brand. React + Vite frontend, Express + SQLite backend. No real payments.
+Built by Dedication Studios as a portfolio piece and a working prototype for the Departure brand. React + Vite frontend, Express + SQLite backend. No real payments.
 
 ---
 
@@ -51,7 +51,7 @@ npm install
 npm run dev
 ```
 
-First API start seeds the catalog into `backend/bps.db`. To reseed from scratch: `npm run reset` in `backend/`, then restart.
+First API start seeds the catalog into `backend/departure.db`. To reseed from scratch: `npm run reset` in `backend/`, then restart.
 
 Demo account: create one with any email + 8-char password. Test card: anything numeric (default `4242 4242 4242 4242`).
 
@@ -65,7 +65,7 @@ The Express server serves the built frontend from `frontend/dist`, so the whole 
 2. Railway → **New Project → Deploy from GitHub repo**. `railway.json` sets the build (`npm run build`) and start (`npm start`) commands automatically.
 3. **Variables** tab → add `JWT_SECRET` (any long random string) and `NODE_ENV=production`.
 4. **Settings → Networking → Generate Domain** — that's your public link.
-5. Optional, so accounts/orders survive redeploys: **+ New → Volume**, mount at `/data`, then add `DB_PATH=/data/bps.db`. Without a volume the catalog re-seeds fresh on every deploy, which is fine for a demo.
+5. Optional, so accounts/orders survive redeploys: **+ New → Volume**, mount at `/data`, then add `DB_PATH=/data/departure.db`. Without a volume the catalog re-seeds fresh on every deploy, which is fine for a demo.
 
 `/api/health` is the healthcheck. Local dev is unchanged (two terminals, above).
 
@@ -74,7 +74,7 @@ The Express server serves the built frontend from `frontend/dist`, so the whole 
 ## Project structure
 
 ```
-boarding-pass-shop/
+departure-shop/
 ├─ backend/
 │  └─ src/
 │     ├─ server.js      Express app + routes
@@ -148,4 +148,4 @@ Phase 2 candidates, roughly in value order:
 
 ---
 
-Design + build: Dedication Studios · Brand concept: Boarding Pass Clothing (Brandon Lile)
+Design + build: Dedication Studios · Brand concept: Departure Clothing (Brandon Lile)
